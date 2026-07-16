@@ -15,7 +15,7 @@ El día anterior (11 de septiembre) también tendremos el **Workshop Django Girl
 La mejor forma de contribuir es **acompañarnos ese día** y compartir tu conocimiento:
 
 - [Postula tu charla en Sessionize](https://sessionize.com/pyday-boyaca/) — aceptamos propuestas de todos los niveles.
-- [Inscríbete al workshop Django Girls](https://djangogirls.org/es/boyaca/) — si quieres dar tus primeros pasos en tecnología.
+- [Inscríbete al workshop Django Girls](https://djangogirls.org/es/boyaca/) — si quieres dar tus primeros pasos en tecnología o acompañar el camino de las aprendices (Necesitamos mentorxs 🥹).
 
 Si quieres apoyar el evento como sponsor, escríbenos a colombiapython@gmail.com.
 
