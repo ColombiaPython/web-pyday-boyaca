@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/colibri.ico" sizes="32x32">
   <style>
     :root {
       --olive: #6f7433;
@@ -180,6 +181,12 @@
       border: 1px solid rgba(255,255,255,.14);
       border-radius: 14px;
       padding: 1rem 1.2rem;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    a.meta-card:hover {
+      border-color: var(--gold-soft);
+      background: rgba(255,255,255,.12);
+      transform: translateY(-2px);
     }
     .meta-card .label {
       font-size: .78rem;
@@ -345,7 +352,6 @@
         <a href="#djangogirls">Django Girls</a>
         <a href="#sponsors">Sponsors</a>
         <a href="#organizan">Comunidades</a>
-        <a class="btn" href="https://luma.com/clrwws8a" target="_blank" rel="noopener">Regístrate</a>
       </div>
     </div>
   </nav>
@@ -358,18 +364,18 @@
       <h1>Donde la comunidad <em>Python</em> se encuentra</h1>
       <p class="sub">Un día de charlas, conocimiento y conexión con la comunidad Python en el corazón de Boyacá. Ven a aprender, compartir y conocer gente increíble.</p>
       <div class="cta-row">
-        <a class="btn" href="https://luma.com/clrwws8a" target="_blank" rel="noopener">Regístrate y guarda tu cupo →</a>
-        <a class="btn ghost" href="#djangogirls">Taller Django Girls</a>
+        <a class="btn" href="https://luma.com/clrwws8a" target="_blank" rel="noopener">Registro PyDay</a>
+        <a class="btn ghost" href="#djangogirls">Workshop Django Girls</a>
       </div>
       <div class="meta-row">
-        <div class="meta-card">
-          <span class="label">Fecha</span>
+        <a class="meta-card" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=PyDay+Boyac%C3%A1+2026&dates=20260912T130000Z/20260912T230000Z&details=Un+d%C3%ADa+de+charlas%2C+conocimiento+y+conexi%C3%B3n+con+la+comunidad+Python+en+el+coraz%C3%B3n+de+Boyac%C3%A1.&location=Sogamoso%2C+Boyac%C3%A1%2C+Colombia" target="_blank" rel="noopener" style="text-decoration: none;" title="Añadir a Google Calendar">
+          <span class="label">Fecha 📅</span>
           <span class="value">12 Sept 2026</span>
-        </div>
-        <div class="meta-card">
-          <span class="label">Lugar</span>
+        </a>
+        <a class="meta-card" href="https://www.google.com/maps/search/?api=1&query=Sogamoso,+Boyac%C3%A1,+Colombia" target="_blank" rel="noopener" style="text-decoration: none;" title="Ver en Google Maps">
+          <span class="label">Lugar 📍</span>
           <span class="value">Sogamoso</span>
-        </div>
+        </a>
         <div class="meta-card">
           <span class="label">Entrada</span>
           <span class="value">Gratuita</span>
@@ -594,7 +600,7 @@
   <!-- ============ FOOTER ============ -->
   <footer>
     <p><strong>PyDay Boyacá 2026</strong> · Sogamoso, Boyacá · 12 de septiembre de 2026</p>
-    <p><a href="https://luma.com/clrwws8a" target="_blank" rel="noopener">Regístrate y guarda tu cupo</a> · <a href="mailto:colombiapython@gmail.com">colombiapython@gmail.com</a></p>
+    <a href="mailto:colombiapython@gmail.com">colombiapython@gmail.com</a></p>
     <span class="code-hint">print('Hola, sumercé')</span>
   </footer>
 
