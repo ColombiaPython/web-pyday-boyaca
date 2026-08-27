@@ -197,6 +197,84 @@
     .section-sub { text-align: center; max-width: 620px; margin: 0 auto 2.2rem; font-size: 1.08rem; }
     .center { text-align: center; }
 
+    /* ---------- AGENDA ---------- */
+    .agenda-section { background: var(--white); }
+    .agenda-date {
+      display: inline-block;
+      background: var(--cream);
+      border: 1px solid var(--green-soft);
+      border-radius: 999px;
+      padding: .35rem 1.1rem;
+      font-weight: 600;
+      font-size: .9rem;
+      color: var(--olive-dark);
+      margin: 0 auto 2rem;
+    }
+    .timeline { max-width: 760px; margin: 0 auto; }
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 108px 1fr;
+      gap: 1.2rem;
+      align-items: center;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(111,116,51,.15);
+    }
+    .timeline-row:last-child { border-bottom: none; }
+    .timeline-time {
+      font-weight: 700;
+      font-size: .92rem;
+      color: var(--olive-dark);
+      line-height: 1.3;
+    }
+    .timeline-main { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+    .timeline-photos { display: flex; flex-shrink: 0; }
+    .timeline-photo {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--white);
+      background: var(--green-soft);
+      box-shadow: 0 0 0 1.5px var(--gold-soft);
+    }
+    .timeline-photo-fallback {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--olive-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .85rem;
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 1.5px var(--gold-soft);
+    }
+    .timeline-photos img + img,
+    .timeline-photos img + span,
+    .timeline-photos span + img,
+    .timeline-photos span + span { margin-left: -16px; }
+    .timeline-info .name { font-weight: 700; font-size: 1rem; }
+    .timeline-info .talk { font-size: .92rem; opacity: .85; }
+    .timeline-row.is-pause { padding: .7rem 0; }
+    .timeline-row.is-pause .timeline-time { color: var(--olive); opacity: .7; }
+    .timeline-row.is-pause .timeline-info .talk {
+      font-style: italic;
+      opacity: .6;
+      font-size: .9rem;
+    }
+    @media (max-width: 640px) {
+      .timeline-row { grid-template-columns: 1fr; gap: .4rem; padding: 1.2rem 0; }
+      .timeline-time {
+        order: -1;
+        font-size: .78rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        opacity: .75;
+      }
+    }
+
     /* ---------- DJANGO GIRLS ---------- */
     .djangogirls { background: var(--olive-deep); color: var(--cream); }
     .djangogirls .section-title { color: var(--gold-soft); }
@@ -253,6 +331,7 @@
     <div class="nav-inner">
       <a class="wordmark" href="#">PyDay <span>Boyacá 2026</span></a>
       <div class="nav-links">
+        <a href="#agenda">Agenda</a>
         <a href="#djangogirls">Django Girls</a>
         <a href="#sponsors">Sponsors</a>
         <a href="#organizan">Comunidades</a>
@@ -294,6 +373,157 @@
       </div>
     </div>
   </header>
+
+  <!-- ============ AGENDA ============ -->
+  <section class="agenda-section" id="agenda">
+    <div class="container center">
+      <h2 class="section-title">Agenda</h2>
+      <p class="section-sub">Así se ve el sábado del PyDay: una sola sala, charlas cortas, gente increíble.</p>
+      <span class="agenda-date">🗓️ Sábado 12 de septiembre de 2026</span>
+    </div>
+    <div class="container">
+      <div class="timeline">
+
+        <div class="timeline-row">
+          <div class="timeline-time">8:15 – 8:45 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/lina-figueredo.jpg" alt="Lina Fernanda Figueredo" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>LF</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Lina Fernanda Figueredo</div>
+              <div class="talk">Construye tu propio ejército: Claude en tu proyecto Python</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">8:45 – 9:15 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/sary-libreros.jpg" alt="Sary Libreros" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>SL</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Sary Libreros</div>
+              <div class="talk">Del prompt al grafo semántico: la capa de contexto de tus agentes en AWS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">9:15 – 9:45 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/melissa-castaneda.png" alt="Melissa Castañeda" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>MC</span>'">
+              <img class="timeline-photo" src="img/speakers/nicolas-aldana.jpg" alt="Nicolás Aldana" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>NA</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Melissa Castañeda y Nicolás Aldana</div>
+              <div class="talk">Clearpath Data: De datos crudos a insights con IA: construyendo un pipeline end-to-end en Python</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row is-pause">
+          <div class="timeline-time">9:45 – 10:15 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-info">
+              <div class="talk">Pausa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">10:15 – 10:45 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/juanfe-martinez.jpg" alt="Juanfe Martínez" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>JM</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Juanfe Martínez</div>
+              <div class="talk">Más allá del notebook: construyendo proyectos de Machine Learning que evolucionan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">10:45 – 11:15 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/carlos-riveros.jpg" alt="Carlos Riveros" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>CR</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Carlos Riveros</div>
+              <div class="talk">¿Y quién revisa mis tests? Elevando la calidad de tus pruebas con Mutation Testing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">11:15 – 11:45 a.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/catalina-cruz.jpg" alt="Catalina Cruz" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>CC</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Catalina Cruz</div>
+              <div class="talk">Una habitación propia en la era de la inteligencia artificial</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row is-pause">
+          <div class="timeline-time">11:45 a.m. – 1:00 p.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-info">
+              <div class="talk">Almuerzo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">1:00 – 1:30 p.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/adriana-moya.jpg" alt="Adriana Fernanda Moya" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>AM</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Adriana Fernanda Moya</div>
+              <div class="talk">Python + ADK: La Fórmula para Crear Agentes con Contexto Real</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">1:30 – 2:00 p.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/laura-moreno.jpg" alt="Laura Moreno" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>LM</span>'">
+              <img class="timeline-photo" src="img/speakers/angela-ramirez.jpg" alt="Angela Ramírez" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>AR</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Laura Moreno y Angela Ramírez</div>
+              <div class="talk">Estación Biológica Andes: IA para la conservación de especies colombianas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-time">2:00 – 2:30 p.m.</div>
+          <div class="timeline-main">
+            <div class="timeline-photos">
+              <img class="timeline-photo" src="img/speakers/edward-burgos.jpg" alt="Edward Burgos" loading="lazy" onerror="this.outerHTML='<span class=\'timeline-photo-fallback\'>EB</span>'">
+            </div>
+            <div class="timeline-info">
+              <div class="name">Edward Burgos</div>
+              <div class="talk">Strands Agents: el SDK open source para agentes en Python</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ============ DJANGO GIRLS WORKSHOP ============ -->
   <section class="djangogirls" id="djangogirls">
